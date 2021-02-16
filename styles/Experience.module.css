@@ -1,0 +1,181 @@
+.experienceContainer {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: #2c2b30;
+    z-index: 10;
+    /* overflow: hidden; */
+}
+.experienceBg {
+    height: 100vh;
+    position: relative;
+}
+.carouselWrapper {
+    width: 100vw;
+    position: absolute;
+    top: 5vh;
+    bottom: 5vh;
+    z-index: 10;
+}
+.carouselContainer {
+    position: relative;
+    /* bottom: 5vh; */
+    left: 5vw;
+    z-index: 10;
+    max-width: 90vw;
+    height: 90vh;
+    box-shadow: 0 0px 24px 12px rgba(0,0,0,0.2);
+}
+/* Images */
+.imgCarouselContainer {
+    height: 100vh;
+    position: relative;
+    transition-duration: 0.8s;
+    transition-delay: 0.2s;
+}
+.imgContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+.websiteImg {
+    height: 100vh;
+    width: 100%;
+    transition: ease-in-out 1s;
+    background-position: center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    z-index: 5;
+}
+.websiteImg img {
+    height: 89.9vh;
+    width: 100%;
+}
+
+/* Info */
+.experienceInfoContainer {
+    width: 50vw;
+    height: 90vh;
+    position: absolute;
+    background: #fff;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    transition-duration: 0.8s;
+    transition-delay: 0.2s;
+    box-shadow: 0 0px 24px 12px rgba(0,0,0,0.2);
+}
+.projectTitle {
+    text-align: left;
+    /* padding-left: 4vw; */
+    padding: 3vh;
+    padding-top: 5vh;
+    height: fit-content;
+    height: 20vh;
+}
+.projectTitle h2 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 4.2vh;
+}
+.projectDescription {
+    border-top: solid 2px #ddd;
+    padding: 3vh;
+    height: 66vh;
+    overflow-y: scroll;
+}
+.projectDescription p {
+    font-weight: 300;
+    font-size: 2.6vh;
+}
+.linkWrapper {
+    text-align: left;
+    width: 100%;
+    position: relative;
+    height: 4vh;
+    z-index: 10;
+    background: rgba(0,0,0,0.6);
+    transition-duration: 0.8s;
+    padding-left: 1vw;
+}
+.linkWrapper span {
+    font-weight: 100;
+    font-size: 1.3vh;
+    color: #fff;
+}
+.carouselButtonsContainer {
+    width: 100%;
+    height: 4.4vh;
+    display: flex;
+    position: absolute;
+    bottom: 1vh;
+    justify-content: space-around;
+} 
+
+@media only screen and (orientation: landscape) {
+    .experienceInfoContainer {
+        width: 32vw;
+    }
+    .projectTitle {
+        height: 30vh;
+        
+    }
+    .projectTitle h2 {
+        font-size: 4.2vw;
+    }
+    .projectDescription {
+        height: 52vh;
+    }
+    .projectDescription p {
+        font-size: 2.6vw;
+    }
+    .linkWrapper {
+        height: 8vh;
+    }
+    .linkWrapper span {
+        font-size: 1.3vw;
+    }
+    .carouselButtonsContainer {
+        height: 4.4vw;
+    }
+}
+@media only screen and (min-height: 600px) and (orientation: landscape) {
+    .projectDescription {
+        height: 54vh;
+    }
+    .linkWrapper {
+        height: 6vh;
+    }
+}
+@media only screen and (min-width: 1400px) and (orientation: landscape) {
+    .carouselContainer {
+        max-width: 34vw;
+        left: 33vw;
+    }
+    .experienceInfoContainer {
+        width: 50%; 
+        background: rgba(255,255,255,0.8);
+    }    
+    .projectTitle {
+        height: 20vh;
+        padding: 3vh;
+        padding-top: 5vh;
+    }
+    .projectTitle h2 {
+        font-size: 2vw;
+    }
+    .projectDescription {
+        padding: 3vh;
+        height: 64vh;
+    }
+    .projectDescription p {
+        font-size: 1.6vw;
+    }
+    .carouselButtonsContainer {
+        bottom: -3vh;
+    }
+}

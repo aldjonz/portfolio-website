@@ -1,0 +1,62 @@
+.contact {
+    width: 100vw;
+    position: relative;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16vh;
+}
+.contactText {
+    width: 88vw;
+    margin-left: 6vw;
+    padding: 6vh auto auto;
+    text-align: left;
+    z-index: 10;
+}
+.contactText h2 {
+    font-size: 4.2vh;
+}
+.contactText p {
+    font-size: 2.6vh;
+}
+.contactText a {
+    font-size: 2.6vh;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: linear-gradient(to right,#ffbe0b, #ffbe0b 50%, #2c2b30 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 100%;
+    background-position: 100%;
+    transition: background-position 600ms ease;
+    cursor: pointer;
+}
+.contactText a:hover {
+    background-position: 0 100%;
+}
+
+@media only screen and (orientation: landscape) {
+    .contactText h2 {
+        font-size: 4.2vw;
+    }
+    .contactText a {
+        font-size: 4.2vw;
+    }
+    .contactText p {
+        font-size: 2.6vw;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .contactText h2 {
+        font-size: 72px;
+    }
+    .contactText a {
+        font-size: 72px;
+    }
+    .contactText p {
+        font-size: 40px;
+    }
+}
