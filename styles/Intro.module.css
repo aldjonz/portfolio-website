@@ -15,6 +15,7 @@
 }
 .introText {
     width: 72vw;
+    height: 80vh;
     margin: auto;
     font-size: 4vh;
     text-align: left;
@@ -29,7 +30,7 @@
     text-align: left;
     color: #a5675d;
     border-bottom: 2px solid #a5675d;
-    padding-bottom: 2vh;
+    /* padding-bottom: 2vh; */
     margin: 0;
 }
 .introText p {
@@ -55,16 +56,10 @@
     }
 
 }
-@media only screen and (min-height: 600px) and (orientation: landscape) {
+@media only screen and (min-height: 700px) and (orientation: landscape) {
     .introContainer {
         height: 100vh;
     }
-}
-@media only screen and (min-height: 1000px) and (orientation: portrait) {
-    .introContainer {
-        height: 100vh;
-    }
-
 }
 @media only screen and (min-width: 600px) {
     .introText {

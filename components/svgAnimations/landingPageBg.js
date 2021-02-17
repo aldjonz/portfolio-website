@@ -7,7 +7,6 @@ const LandingPageBg = (props) => {
 
     const svgContainer = useRef('');
     const svgBody = useRef('');
-    // const svgChildRef = useRef('');
     const colourLayer = useRef('');
 
     useEffect(() => {

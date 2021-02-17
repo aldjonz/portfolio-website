@@ -205,41 +205,19 @@ a {
 
 /* Carousel Buttons */
 
-.carouselButton {
-  width: 22vw;
-  height: 24px;
-  background: #2c2b30;
-  color: #ddd;
-  opacity: 0.9;
-  text-align: center;
-  border-radius: 45px;
-  font-size: 2.8vw;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding: 4px;
-  /* padding-top: 4px; */
-  cursor: pointer;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
-  transition-duration: 0.2s;
-}
-.carouselButton:hover {
-  transform: scale(1.05);
-}
-
 .techIcon {
   text-align: center;
   width: 45%;
   margin: auto;
   margin-bottom: 0vh;
   transition-duration: .3s;
-  font-size: 2.6vh;
+  font-size: 1.3vh;
   color: #d6d6d6;
 }
 
 .techIcon img {
-  width: 12vh;
-  height: 12vh;
+  width: 8vh;
+  height: 8vh;
   transition-duration: .3s;
   opacity: 0.9;
 }
@@ -344,13 +322,14 @@ a {
 /* SVG Text */
 #titleName {
   position: absolute;
-  top: 20vh;
+  top: 16vh;
   left: 4vw;
   animation: fill 0.5s ease forwards 3s;
   height: 14vh;
   width: 90vw;
   max-width: 900px;
   max-height: 200px;
+  stroke: #d6d6d6;
 }
 .nameSvgAnim path:nth-child(2) {
   stroke-dasharray: 535;
@@ -462,9 +441,11 @@ a {
 .frontEnd {
   opacity: 0;
   background: #d6d6d6;
-  padding: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
   color: #4f4f51;
   width: fit-content;
+  margin-bottom: 0;
   margin-left: auto;
 }
 .frontEndAnimation {
@@ -652,16 +633,17 @@ a {
   }
 
   .techIcon {
-    font-size: 2.6vw;
+    font-size: 1.3vw;
     width: 25%;
   }
   .techIcon img {
-    height: 12vw;
-    width: 12vw;
+    height: 8vw;
+    width: 8vw;
   }
 
   #titleName {
-    left: 8vw;
+    left: 4vw;
+    height: 14vw;
   }
   .designer {
     max-width: 24vw;
@@ -692,9 +674,6 @@ a {
     width: 12vh;
     height: 34px;
     font-size: 2vh;
-  }
-  .techIcon {
-    font-size: 1.6vw;
   }
 }
 
@@ -730,9 +709,9 @@ a {
   }
 }
 @media only screen and (min-width: 700px) and (min-height: 340px) and (max-width: 900px) and (max-height: 415px) {
-  .overlapAnimation0 {
+  /* .overlapAnimation0 {
     bottom: -320px;
-  }
+  } */
 }
 @media (pointer: fine) {
   .techIcon {

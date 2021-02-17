@@ -10,7 +10,6 @@
   z-index: 12;
   top: 0;
   left: 0;
-  font-size: 6.8vh;
   pointer-events: none;
 }
 
@@ -18,7 +17,7 @@
   position: absolute;
   z-index: 12;
   text-align: right;
-  top: 52vh;
+  bottom: 24vh;
   right: 4vw;
   width: fit-content;
   font-size: 4.2vh;
@@ -29,7 +28,6 @@
   font-weight: 300;
 }
 .innerSecondaryTitle {
-  margin-top: -4vh;
   display: block;
 }
 .downChevron {
@@ -56,26 +54,15 @@
   }
   .secondaryTitle {
     font-size: 4.2vw;
-    top: 42vh;
+    bottom: 16vh;
   } 
   .innerSecondaryTitle {
     display: flex;
-    margin-top: -10vh;
   }
 }
 @media only screen and (min-height: 600px) and (orientation: landscape) {
-  .bottomBorder {
-    bottom: 0;
-  }
-}
-@media only screen and (min-width: 600px) and (orientation: landscape) {
-  .innerSecondaryTitle {
-    margin-top: -6vh;
-  }
-}
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
   .secondaryTitle {
-    top: 46vh;
+    bottom: 22vh;
   }
 }
 @media only screen and (min-width: 1400px) {

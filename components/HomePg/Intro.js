@@ -6,7 +6,7 @@ const Intro = (props) => {
     return (
         <div className={styles.introContainer}>
             <div className={styles.introBg}>
-                <IntroBg>
+                {/* <IntroBg> */}
                     <div className={styles.introText}>
                         <h2 
                             data-aos="fade-right"
@@ -18,7 +18,7 @@ const Intro = (props) => {
                             data-aos-easing="linear"    
                         >I design and build modern and high quality websites and applications tailored to your business whilst providing attentive customer service. I always strive to create the highest quality products and to push myself in my work.</p>
                     </div>
-                </IntroBg>
+                <IntroBg />
             </div>
                 
         </div>
