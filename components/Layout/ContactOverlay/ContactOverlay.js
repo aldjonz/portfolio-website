@@ -3,10 +3,9 @@ import SocialMedia from '../../UI/socialMediaIcons';
 import CloseButton from './closeButton';
 
 const ContactOverlay = () => {
-    const [overlayHeight, setOverlayHeight] = useState('0vh');
-    const [overlayZIndex, setOverlayZIndex] = useState('0');
-    const [overlayTopPos, setOverlayTopPos] = useState('50vh');
     const [contactColour, setContactColour] = useState('#d6d6d6');
+    const [prevXPos, setPrevXPos] = useState('100%');
+    const [overlayXPos, setOverlayXPos] = useState('100%');
 
     const lightText = () => {
         setContactColour('#d6d6d6');
@@ -30,18 +29,29 @@ const ContactOverlay = () => {
         }
     });
 
+
     const openOverlay = () => {
-        setOverlayZIndex('2000');
-        setOverlayHeight('100vh');
-        setOverlayTopPos('0');
-        document.documentElement.style.overflow = "hidden"
+        setOverlayXPos('0%');
+
+        document.documentElement.style.overflow = "hidden";
+
+        requestAnimationFrame(openOverlay);
     }
 
     const closeOverlay = () => {
-        setOverlayHeight('0vh');
-        setOverlayZIndex('0');
-        setOverlayTopPos('50vh');
-        document.documentElement.style.overflow = "scroll"
+
+        if(prevXPos === '100%') {
+            setOverlayXPos('-100%');
+            setPrevXPos('-100%');
+        } else { 
+            setOverlayXPos('100%');
+            setPrevXPos('100%');
+        }
+
+        document.documentElement.style.overflowY = "scroll";
+        document.documentElement.style.overflowX = "hidden";
+
+        requestAnimationFrame(closeOverlay);
     }
 
     return (
@@ -49,7 +59,7 @@ const ContactOverlay = () => {
             <div className="contactButtonWrapper">
                 <h2 onClick={openOverlay} style={{ color: contactColour, transitionDuration: '0.2s' }}>contact</h2>
             </div>
-            <div className="contactOverlay" style={{ height: overlayHeight, zIndex: overlayZIndex, top: overlayTopPos }}>
+            <div className="contactOverlay" style={{ transform: `translateX(${overlayXPos})` }}>
                 <div className="contactDetailsContainer" >
                     <CloseButton 
                         closeOverlay={closeOverlay}

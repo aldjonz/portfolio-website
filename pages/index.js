@@ -12,7 +12,6 @@ import ContactSection from '../components/HomePg/ContactSection';
 export default function Home() {
 
   return (
-    // <div className={styles.container}>
     <Layout>
       <LandingPage />
       <IntroSection />
@@ -20,6 +19,5 @@ export default function Home() {
       <Skills />
       <ContactSection />
     </Layout>
-    // </div>
   )
 }

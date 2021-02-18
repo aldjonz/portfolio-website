@@ -105,9 +105,9 @@ const Experience =(props) => {
 
     return (
         <div ref={expRef} className={styles.experienceContainer} onKeyDown={e => handleKeyDown(e)} onMouseDown={e => handleDragStart(e)} >
-            <div className={styles.experienceBg}>
+            {/* <div className={styles.experienceBg}> */}
                 {/* <ExperienceBg /> */}
-            </div>
+            {/* </div> */}
                 <WebsiteInfo
                     projectProps={projectProperties} 
                     carouselPos={carouselPos}

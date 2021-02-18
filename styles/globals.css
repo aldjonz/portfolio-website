@@ -92,7 +92,7 @@ a {
   transform-origin: center;
   transform: rotateZ(45deg);
   margin-left: 1px;
-  transition-duration: 0.4s;
+  transition-duration: 0.2s;
 }
 .closeRight {
   width: 3px;
@@ -102,15 +102,17 @@ a {
   margin-left: auto;
   transform-origin: center;
   transform: rotateZ(-45deg) ;
-  transition-duration: 0.4s;
+  transition-duration: 0.2s;
 }
 .contactOverlay {
   position: fixed;
   backdrop-filter: blur(5px);
   width: 100vw;
-  transition-duration: .4s;
+  transition-duration: .6s;
   overflow: hidden;
-  bottom: 50vh;
+  /* bottom: 50vh; */
+  height: 100vh;
+  z-index: 2000;
 }
 .contactDetailsContainer {
   position: relative;
@@ -154,23 +156,24 @@ a {
 
 
 .svgContainer {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   background: #2c2b30;
   height: 100vh;
-  /* transform: scale(1.4); */
 }
 .svgBody {
   height: 100vh;
-  width: fit-content;
-  margin: 0 -60%;
+  width: 100%;
+  margin-top: -10vh;
   display: block;
   z-index: 1;
   position: relative;
   background: transparent;
+  transform: scale(8);
+  transition-duration: 1s;
 }
 .svgEl {
-  transition-duration: .6s;
+  transition-duration: 1.4s;
   opacity: 0.4;
 }
 .overlapAnimation0 {
@@ -194,9 +197,6 @@ a {
   transform: rotateZ(-10deg);
 }
 
-
-/* Carousel Buttons */
-
 .techIcon {
   text-align: center;
   width: 45%;
@@ -207,6 +207,10 @@ a {
   color: #d6d6d6;
 }
 
+.techIcon:hover {
+  color: #d6d6d6;
+}
+
 .techIcon img {
   width: 8vh;
   height: 8vh;
@@ -214,6 +218,7 @@ a {
   opacity: 0.9;
 }
 .techIcon:hover img {
+  -webkit-transform: scale(1.2);
   transform: scale(1.2);
   opacity: 1;
 }
@@ -231,84 +236,6 @@ a {
 }
 .socialMediaContainer a {
   margin-right: 2vw;
-}
-
-/* Ripple effect */
-
-.wrap {
-  position: absolute;
-  width: 0.7vh;
-  height: 1.4vh;
-  left: 0;
-  top: 0vh;
-  z-index: 20;
-}
-.ripple {
-  position: absolute;
-  box-sizing: border-box;
-  width: 14vh;
-  height: 14vh;
-}
-
-.ripple .ripple-svg {
-  position: absolute;
-  width: 14vh;
-  height: 14vh;
-  opacity: 0;
-}
-
-.ripple .ripple-svg circle {
-   fill: none;
-   stroke: rgba(255,255,255,0.6);
-   stroke-width: 10px;
-   stroke-alignment: inner;
-}
-
-.ripple-1 {
-  animation: ripple 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s infinite;
-}
-
-.ripple-1 .ripple-svg {
-  animation: fade-in-out 8s linear 0s infinite;
-}
-
-.ripple-1 .ripple-svg circle {
-  animation: border 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s infinite;
-}
-
-.ripple-3 {
-  animation: ripple 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s infinite;
-}
-
-.ripple-3 .ripple-svg {
-  animation: fade-in-out 8s linear 0.35s infinite;
-}
-
-.ripple-3 .ripple-svg circle {
-  animation: border 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s infinite;
-}
-
-@keyframes fade-in-out {
-  0% {opacity: 0}
-  21.5% {opacity: 0}
-  26% {opacity: 1}
-  32.5% {opacity: 1}
-  50% {opacity: 0}
-  100% {opacity: 0}
-}
-
-@keyframes ripple {
-  0% { transform: scale3d(0.2, 0.2, 0.2) }
-  21.5% { transform: scale3d(0.2, 0.2, 0.2) }
-  50% { transform: scale3d(0.9, 0.9, 0.9) }
-  100% { transform: scale3d(0.9, 0.9, 0.9) }
-}
-
-@keyframes border {
-  0% { stroke-width: 6px }
-  21.5% { stroke-width: 6px }
-  50% {stroke-width: 2px }
-  100% {stroke-width: 2px }
 }
 
 /* SVG Text */
@@ -579,7 +506,7 @@ a {
 @media only screen and (orientation: landscape) {
 
   .svgBody {
-    margin: -20vh -46vw;
+    transform: scale(6);
     height: 100vw;
   }
 
@@ -654,8 +581,7 @@ a {
 
 @media only screen and (orientation: landscape) and (min-width: 1000px) {
   .svgBody {
-    margin: auto;
-    height: 100vh;
+    transform: scale(5);
   }
   .emailAddressContainer {
     margin: 28vh auto auto;
@@ -671,8 +597,8 @@ a {
 
 @media only screen and (min-width: 600px) and (orientation: portrait) {
   .svgBody {
-    margin: 0 auto;
-    transform: scale(1.2);
+    /* margin: 0 auto; */
+    transform: scale(7);
   }
   #titleName {
     top: 28vh;
@@ -691,8 +617,18 @@ a {
   }
 }
 @media only screen and (min-width: 1400px) {
+  .svgBody {
+    transform: scale(3.6);
+    margin-top: -50vh;
+    margin-left: -10vw;
+  }
   .contactButtonWrapper {
     font-size: 20px;
+  }
+}
+@media only screen and (max-height: 300px) {
+  #titleName {
+    top: 6vh
   }
 }
 @media only screen and (min-height: 1000px) {
@@ -709,7 +645,7 @@ a {
   .techIcon {
     color: transparent;
   }
-  .techIcon:hover {
+  /* .techIcon:hover {
     color: #d6d6d6;
-  }
+  } */
 }

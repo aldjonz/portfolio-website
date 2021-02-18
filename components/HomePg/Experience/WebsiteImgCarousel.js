@@ -30,9 +30,9 @@ const WebsiteImgCarousel = (props) => {
         fade: true
     };
 
-    let displayImages = props.projectImages.map((image) => {
+    let displayImages = props.projectImages.map((image, i) => {
         return (
-            <div className={styles.websiteImg} onMouseDown={props.focus} onMouseUp={props.unfocus} onTouchStart={props.focus} onTouchEnd={props.unfocus}>
+            <div key={i} className={styles.websiteImg} onMouseDown={props.focus} onMouseUp={props.unfocus} onTouchStart={props.focus} onTouchEnd={props.unfocus}>
                 <img src={image} alt="bgImg" />
             </div>
         )

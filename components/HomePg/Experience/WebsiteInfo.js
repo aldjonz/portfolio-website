@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { useMediaQuery } from '../../Hooks/hooks';
+import React, { useState, useEffect, useRef } from 'react';
+import { useMediaQuery, useWindowSize } from '../../Hooks/hooks';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
@@ -11,10 +11,14 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 
 function WebsiteInfo(props) {
     const [infoPos, setInfoPos] = useState('0');
-
-    const isDesktopLg = useMediaQuery(1400);
+    const [windowHeight, setWindowHeight] = useState(null);
+    const [widnowWidth, setWindowWidth] = useState(null);
 
     const carouselRef = useRef('');
+
+    const [width, height] = useWindowSize();
+    const isDesktopLg = useMediaQuery(1400);
+
 
     const toggleInfoWidth = () => {
         if(infoPos === '0') {
@@ -24,11 +28,26 @@ function WebsiteInfo(props) {
         }
     }
 
+    const updateDimensions = () => {
+        setWindowHeight(window.innerHeight);
+        setWindowWidth(window.innerWidth);
+    }
+
+    useEffect(() => {
+        updateDimensions();
+        window.addEventListener('resize', updateDimensions);
+
+        return () => {
+            window.removeEventListener('resize', updateDimensions);
+        }
+    },[])
+
     return (
         <CarouselProvider
-            naturalSlideWidth={100}
-            naturalSlideHeight={200}
-            totalSlides={2}
+            ref={carouselRef}
+            naturalSlideWidth={widnowWidth}
+            naturalSlideHeight={windowHeight}
+            totalSlides={props.projectProps.length}
             isPlaying={true}
             interval={8000}
         >
@@ -36,7 +55,7 @@ function WebsiteInfo(props) {
                 <Slider>
                 {props.projectProps.map((objArr) => {
                     return (
-                        <Slide index={objArr.id}>
+                        <Slide index={objArr.id} key={objArr.id}>
                             <div className={styles.carouselContainer}>    
                                 <div className={styles.imgCarouselContainer} style={{ left: props.carouselPos }}>
                                     <WebsiteImgCarousel 
