@@ -158,6 +158,7 @@ a {
   overflow: hidden;
   background: #2c2b30;
   height: 100vh;
+  /* transform: scale(1.4); */
 }
 .svgBody {
   height: 100vh;
@@ -171,15 +172,6 @@ a {
 .svgEl {
   transition-duration: .6s;
   opacity: 0.4;
-}
-
-.drippingAnimation {
-  top: -80px;
-  margin: auto;
-  background: transparent;
-  display: block;
-  z-index: 2;
-  position: absolute;
 }
 .overlapAnimation0 {
   margin: auto;

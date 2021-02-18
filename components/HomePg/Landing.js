@@ -9,8 +9,6 @@ const LandingPage = () => {
     const [fillTitle, setFillTitle] = useState('transparent');
     const [svgLoaded, setSvgLoaded] = useState(false);
 
-    const svgChildRef = useRef('');
-
     const colour0 = '#f58f7c';
     const colour1 = '#4f4f51';
     const colour2 = '#f2c4ce';
@@ -572,17 +570,6 @@ const LandingPage = () => {
         colour1,
     ];
 
-    const clickColour = () => {
-        svgChildRef.current.childNodes.forEach((el, i) => {
-            setTimeout(() => {
-                el.style.stroke = 'none';
-                el.style.fill = primaryColourArr[el.id];
-                el.style.opacity = "0.6";
-            }, i * 6)
-        })
-
-    }
-
     useEffect(() => {
         if(svgLoaded) {
             setTimeout(() => {
@@ -593,10 +580,9 @@ const LandingPage = () => {
     })
 
     return (
-        <div onClick={clickColour} onTouchStart={clickColour} className={styles.landingContainer}>
+        <div className={styles.landingContainer}>
             <LandingPageBg 
                 primaryColourArr={primaryColourArr}
-                svgChildRef={svgChildRef}
                 setSvgLoaded={setSvgLoaded}
             />
             <div className={styles.mainTitle}>

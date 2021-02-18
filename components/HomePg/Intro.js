@@ -6,7 +6,6 @@ const Intro = (props) => {
     return (
         <div className={styles.introContainer}>
             <div className={styles.introBg}>
-                {/* <IntroBg> */}
                     <div className={styles.introText}>
                         <h2 
                             data-aos="fade-right"

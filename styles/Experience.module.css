@@ -20,6 +20,7 @@
 .carouselContainer {
     position: relative;
     overflow: hidden;
+    transition-duration: 1s;
     /* bottom: 5vh; */
     left: 5vw;
     z-index: 10;
@@ -55,6 +56,13 @@
 .websiteImg img {
     height: 89.9vh;
     width: 100%;
+}
+
+.sliderContainer {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
 }
 
 /* Info */
