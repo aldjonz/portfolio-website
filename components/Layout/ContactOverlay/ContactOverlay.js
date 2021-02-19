@@ -51,7 +51,7 @@ const ContactOverlay = () => {
         document.documentElement.style.overflowY = "scroll";
         document.documentElement.style.overflowX = "hidden";
 
-        requestAnimationFrame(closeOverlay);
+        // requestAnimationFrame(closeOverlay);
     }
 
     return (

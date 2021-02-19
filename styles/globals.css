@@ -162,14 +162,16 @@ a {
   height: 100vh;
 }
 .svgBody {
-  height: 100vh;
-  width: 100%;
-  margin-top: -10vh;
+  height: 2600px;
+  width: 2600px;
+  margin-top: -900px;
+  margin-left: -1200px;
   display: block;
   z-index: 1;
   position: relative;
   background: transparent;
-  transform: scale(8);
+  /* transform: scale(6); */
+  /* transform: scale3d(1,1,1); */
   transition-duration: 1s;
 }
 .svgEl {
@@ -321,14 +323,14 @@ a {
   stroke-dashoffset: 490;
 }
 .nameSvgAnim path:nth-child(9) {
-  stroke-dasharray: 239;
-  stroke-dashoffset: 239;
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
   animation: line-anim 2s ease forwards 2.1s;
   transition-duration: 1s;
 }
 .nameSvg path:nth-child(9) {
-  stroke-dasharray: 239;
-  stroke-dashoffset: 239;
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
 }
 .nameSvgAnim path:nth-child(10) {
   stroke-dasharray: 515;
@@ -503,12 +505,16 @@ a {
   }
 }
 
+.carouselStyle {
+  outline: none !important;
+}
+
 @media only screen and (orientation: landscape) {
 
-  .svgBody {
+  /* .svgBody {
     transform: scale(6);
     height: 100vw;
-  }
+  } */
 
   .closeLeft {
     height: 3vw;
@@ -581,7 +587,10 @@ a {
 
 @media only screen and (orientation: landscape) and (min-width: 1000px) {
   .svgBody {
-    transform: scale(5);
+    height: 4000px;
+    width: 4000px;
+    margin-top: -1400px;
+    margin-left: -1700px;
   }
   .emailAddressContainer {
     margin: 28vh auto auto;
@@ -597,8 +606,10 @@ a {
 
 @media only screen and (min-width: 600px) and (orientation: portrait) {
   .svgBody {
-    /* margin: 0 auto; */
-    transform: scale(7);
+    height: 4000px;
+    width: 4000px;
+    margin-top: -1400px;
+    margin-left: -1800px;
   }
   #titleName {
     top: 28vh;
@@ -618,9 +629,10 @@ a {
 }
 @media only screen and (min-width: 1400px) {
   .svgBody {
-    transform: scale(3.6);
-    margin-top: -50vh;
-    margin-left: -10vw;
+    height: 6000px;
+    width: 6000px;
+    margin-top: -2200px;
+    margin-left: -2200px;
   }
   .contactButtonWrapper {
     font-size: 20px;
@@ -628,7 +640,7 @@ a {
 }
 @media only screen and (max-height: 300px) {
   #titleName {
-    top: 6vh
+    top: 16vh
   }
 }
 @media only screen and (min-height: 1000px) {

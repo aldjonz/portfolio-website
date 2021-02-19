@@ -30,22 +30,6 @@
 .innerSecondaryTitle {
   display: block;
 }
-.downChevron {
-  cursor: pointer;
-  transition-duration: .4s;
-  position: absolute;
-  color: #d6d6d6;
-  bottom: 2vh;
-  left: 50vw;
-  width: 3vw;
-  height: 3vw;
-  font-size: 4.2vh;
-  text-align: center;
-  z-index: 10;
-}
-.downChevron:hover {
-  transform: translateY(-20%);
-}
 
 @media only screen and (orientation: landscape) {
   .landingContainer {
@@ -62,11 +46,22 @@
 }
 @media only screen and (min-height: 600px) and (orientation: landscape) {
   .secondaryTitle {
-    bottom: 22vh;
+    bottom: 20vh;
+  }
+}
+@media only screen and (max-height: 300px) {
+  .secondaryTitle {
+    bottom: 4vh;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .secondaryTitle {
+    right: 0;
   }
 }
 @media only screen and (min-width: 1400px) {
   .secondaryTitle {
     font-size: 4em;
+    bottom: 14vh;
   }
 }

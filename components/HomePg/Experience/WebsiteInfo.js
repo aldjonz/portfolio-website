@@ -37,6 +37,8 @@ function WebsiteInfo(props) {
         updateDimensions();
         window.addEventListener('resize', updateDimensions);
 
+        console.log(window.innerWidth)
+
         return () => {
             window.removeEventListener('resize', updateDimensions);
         }
@@ -50,6 +52,7 @@ function WebsiteInfo(props) {
             totalSlides={props.projectProps.length}
             isPlaying={true}
             interval={8000}
+            className="carouselStyle"
         >
             <div className={styles.carouselWrapper}>
                 <Slider>
