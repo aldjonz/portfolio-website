@@ -245,7 +245,7 @@ a {
   position: absolute;
   top: 16vh;
   left: 4vw;
-  animation: fill 0.5s ease forwards 3s;
+  animation: fill 0.5s ease forwards 2s;
   height: 14vh;
   width: 90vw;
   max-width: 900px;
@@ -388,8 +388,8 @@ a {
 }
 .developerAnim {
   animation: 
-    blink-caret .75s step-end 8 4s,
-    typing 4s steps(40, end) forwards 5s;
+    typing 4s steps(36, end) forwards 5s,
+    blink-caret .75s step-end 7 4s;
   /* animation-delay: 4s; */
 }
 
@@ -424,7 +424,7 @@ a {
 .designerAnim path:nth-child(9) {
   stroke-dashoffset: 430;
   stroke-dasharray: 430;
-  animation: strokeOffset 0.4s linear forwards 7.4s;
+  animation: strokeOffset 0.4s linear forwards 0s;
 }
 .designer path:nth-child(8) {
   stroke-dashoffset: 365;
@@ -433,7 +433,7 @@ a {
 .designerAnim path:nth-child(8) {
   stroke-dashoffset: 365;
   stroke-dasharray: 365;
-  animation: strokeOffset 0.4s linear forwards 7.7s;
+  animation: strokeOffset 0.4s linear forwards 0.3s;
 }
 .designer path:nth-child(7) {
   stroke-dashoffset: 296;
@@ -442,7 +442,7 @@ a {
 .designerAnim path:nth-child(7) {
   stroke-dashoffset: 296;
   stroke-dasharray: 296;
-  animation: strokeOffset 0.4s linear forwards 8s;
+  animation: strokeOffset 0.4s linear forwards 0.6s;
 }
 .designer path:nth-child(6) {
   stroke-dashoffset: 57;
@@ -451,7 +451,7 @@ a {
 .designerAnim path:nth-child(6) {
   stroke-dashoffset: 57;
   stroke-dasharray: 57;
-  animation: strokeOffset 0.4s linear forwards 8.3s;
+  animation: strokeOffset 0.4s linear forwards 0.9s;
 }
 .designer path:nth-child(5) {
   stroke-dashoffset: 135;
@@ -460,7 +460,7 @@ a {
 .designerAnim path:nth-child(5) {
   stroke-dashoffset: 135;
   stroke-dasharray: 135;
-  animation: strokeOffset 0.4s linear forwards 8.6s;
+  animation: strokeOffset 0.4s linear forwards 1.2s;
 }
 .designer path:nth-child(4) {
   stroke-dashoffset: 469;
@@ -469,7 +469,7 @@ a {
 .designerAnim path:nth-child(4) {
   stroke-dashoffset: 469;
   stroke-dasharray: 469;
-  animation: strokeOffset 0.4s linear forwards 8.9s ;
+  animation: strokeOffset 0.4s linear forwards 1.5s;
 }
 .designer path:nth-child(3) {
   stroke-dashoffset: 371;
@@ -478,7 +478,7 @@ a {
 .designerAnim path:nth-child(3) {
   stroke-dashoffset: 371;
   stroke-dasharray: 371;
-  animation: strokeOffset 0.4s linear forwards 9.2s;
+  animation: strokeOffset 0.4s linear forwards 1.8s;
 }
 .designer path:nth-child(2) {
   stroke-dashoffset: 360;
@@ -487,7 +487,7 @@ a {
 .designerAnim path:nth-child(2) {
   stroke-dashoffset: 360;
   stroke-dasharray: 360;
-  animation: strokeOffset 0.4s linear forwards 9.5s;
+  animation: strokeOffset 0.4s linear forwards 2.1s;
 }
 .designer path:nth-child(1) {
   stroke-dashoffset: 246;
@@ -496,7 +496,7 @@ a {
 .designerAnim path:nth-child(1) {
   stroke-dashoffset: 246;
   stroke-dasharray: 246;
-  animation: strokeOffset 0.4s linear forwards 9.8s;
+  animation: strokeOffset 0.4s linear forwards 2.4s;
 }
 
 @keyframes strokeOffset {
@@ -505,8 +505,15 @@ a {
   }
 }
 
-.carouselStyle {
+/* removes outline on carousel*/
+.carousel__slide {
   outline: none !important;
+}
+.focusRing___1airF.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carouselStyle {
+  padding-top: 5vh;
 }
 
 @media only screen and (orientation: landscape) {
@@ -612,7 +619,7 @@ a {
     margin-left: -1800px;
   }
   #titleName {
-    top: 28vh;
+    top: 20vh;
   }
   .designer {
     width: 40vw;
@@ -657,7 +664,4 @@ a {
   .techIcon {
     color: transparent;
   }
-  /* .techIcon:hover {
-    color: #d6d6d6;
-  } */
 }

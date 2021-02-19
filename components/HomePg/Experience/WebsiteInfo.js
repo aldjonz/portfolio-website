@@ -37,8 +37,6 @@ function WebsiteInfo(props) {
         updateDimensions();
         window.addEventListener('resize', updateDimensions);
 
-        console.log(window.innerWidth)
-
         return () => {
             window.removeEventListener('resize', updateDimensions);
         }
@@ -52,13 +50,13 @@ function WebsiteInfo(props) {
             totalSlides={props.projectProps.length}
             isPlaying={true}
             interval={8000}
-            className="carouselStyle"
+            // className="carouselStyle"
         >
             <div className={styles.carouselWrapper}>
                 <Slider>
                 {props.projectProps.map((objArr) => {
                     return (
-                        <Slide index={objArr.id} key={objArr.id}>
+                        <Slide index={objArr.id} key={objArr.id} className="carouselStyle">
                             <div className={styles.carouselContainer}>    
                                 <div className={styles.imgCarouselContainer} style={{ left: props.carouselPos }}>
                                     <WebsiteImgCarousel 
@@ -88,9 +86,7 @@ function WebsiteInfo(props) {
                                             <span>{objArr.link.title}</span>
                                         </div>
                                     </a>
-
                                 </div>
-        
                             </div>
                         </Slide>
                     ) 

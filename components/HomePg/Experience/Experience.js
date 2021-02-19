@@ -58,6 +58,19 @@ const Experience =(props) => {
                 url: ''
             }
         },
+        {
+            id: '2',
+            title: 'Personal Project 2',
+            text: 'Personal Projec Text 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio.',
+            img: [
+                'https://images.unsplash.com/photo-1613047503507-b8d01ce6af26?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDd8Sjl5clBhSFhSUVl8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1612677318581-c9cb7197d0a6?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8Sjl5clBhSFhSUVl8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+            ],
+            link: {
+                title: 'heloo2.com',
+                url: ''
+            }
+        },
     ];
 
     const dragSlider = (e) => {
