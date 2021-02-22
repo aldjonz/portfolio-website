@@ -19,7 +19,7 @@ const LandingPage = () => {
         if(svgLoaded) {
             setTimeout(() => {
                 setFillTitle('#d6d6d6');
-            }, 2000);
+            }, 4000);
         }
     })
 

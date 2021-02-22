@@ -200,12 +200,6 @@
     .carouselButtonsContainer {
         height: 4.4vw;
     }
-    .titleTag {
-        /* width: 60vh; */
-        /* height: 8vh;
-        left: 87.5vw;
-        bottom: 85.5vh; */
-    }
 }
 @media only screen and (min-height: 600px) and (orientation: landscape) {
     .projectDescription {

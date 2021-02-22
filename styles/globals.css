@@ -253,7 +253,6 @@ a {
   position: absolute;
   top: 16vh;
   left: 4vw;
-  animation: fill 0.5s ease forwards 2s;
   height: 14vh;
   width: 90vw;
   max-width: 900px;
