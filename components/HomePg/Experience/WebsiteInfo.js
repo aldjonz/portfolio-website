@@ -10,22 +10,25 @@ import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 function WebsiteInfo(props) {
-    const [infoPos, setInfoPos] = useState('0');
+    const [infoPos, setInfoPos] = useState('200%');
+    const [headerPos, setHeaderPos] = useState('80%');
     const [windowHeight, setWindowHeight] = useState(null);
-    const [widnowWidth, setWindowWidth] = useState(null);
+    const [windowWidth, setWindowWidth] = useState(null);
+
 
     const carouselRef = useRef('');
 
     const [width, height] = useWindowSize();
     const isDesktopLg = useMediaQuery(1400);
+    
+    const openInfoTab = () => {
+        setInfoPos('0');
+        setHeaderPos('-50vw');
+    }
 
-
-    const toggleInfoWidth = () => {
-        if(infoPos === '0') {
-            setInfoPos('100%');
-        } else {
-            setInfoPos('0');
-        }
+    const closeInfoTab = () => {
+        setHeaderPos('80%');            
+        setInfoPos('200%');
     }
 
     const updateDimensions = () => {
@@ -45,33 +48,36 @@ function WebsiteInfo(props) {
     return (
         <CarouselProvider
             ref={carouselRef}
-            naturalSlideWidth={widnowWidth}
+            naturalSlideWidth={windowWidth}
             naturalSlideHeight={windowHeight}
             totalSlides={props.projectProps.length}
             isPlaying={true}
             interval={8000}
-            // className="carouselStyle"
         >
             <div className={styles.carouselWrapper}>
                 <Slider>
                 {props.projectProps.map((objArr) => {
                     return (
                         <Slide index={objArr.id} key={objArr.id} className="carouselStyle">
-                            <div className={styles.carouselContainer}>    
-                                <div className={styles.imgCarouselContainer} style={{ left: props.carouselPos }}>
+                            <div className={styles.carouselContainer} >    
+                                <div className={styles.imgCarouselContainer} onClick={closeInfoTab} style={{ left: props.carouselPos }}>
                                     <WebsiteImgCarousel 
                                         projectImages={objArr.img}
                                     />
                                 </div>
-                                <div className={styles.experienceInfoContainer} style={{ transform: `translateX(${infoPos})`, right: props.carouselPos }}>
+                                {isDesktopLg ? 
+                                    <div className={styles.titleTag} onClick={openInfoTab} style={{ transform: `rotateZ(90deg) translateY(${headerPos})` }}><p>{objArr.title}</p></div> :
+                                    null
+                                }
+                                <div className={styles.experienceInfoContainer} style={{ transform: isDesktopLg ? `translateX(${infoPos})` : null, right: props.carouselPos }}>
             
-                                    {isDesktopLg ? 
-                                    <div className={styles.tag} onClick={toggleInfoWidth}>
+                                    {/* {isDesktopLg ? 
+                                    <div className={styles.tag} onClick={toggleInfoWidth} style={{ transform: `translateX(${tagPos})` }}>
                                         {infoPos === '0' ? 
                                             <FontAwesomeIcon className={styles.icon} icon={faChevronRight} /> :
                                             <FontAwesomeIcon className={styles.icon} icon={faChevronLeft} />
                                         }
-                                    </div> : null }
+                                    </div> : null } */}
 
                                     <div className={styles.projectTitle}>
                                         <h2>{objArr.title}</h2>

@@ -4,8 +4,8 @@ import CloseButton from './closeButton';
 
 const ContactOverlay = () => {
     const [contactColour, setContactColour] = useState('#d6d6d6');
-    const [prevXPos, setPrevXPos] = useState('100%');
-    const [overlayXPos, setOverlayXPos] = useState('100%');
+    const [prevXPos, setPrevXPos] = useState('200%');
+    const [overlayXPos, setOverlayXPos] = useState('200%');
 
     const lightText = () => {
         setContactColour('#d6d6d6');
@@ -35,23 +35,20 @@ const ContactOverlay = () => {
 
         document.documentElement.style.overflow = "hidden";
 
-        requestAnimationFrame(openOverlay);
     }
 
     const closeOverlay = () => {
-
-        if(prevXPos === '100%') {
-            setOverlayXPos('-100%');
-            setPrevXPos('-100%');
+        if(prevXPos === '200%') {
+            setOverlayXPos('-200%');
+            setPrevXPos('-200%');
+            console.log(prevXPos);
         } else { 
-            setOverlayXPos('100%');
-            setPrevXPos('100%');
+            setOverlayXPos('200%');
+            setPrevXPos('200%');
         }
 
         document.documentElement.style.overflowY = "scroll";
         document.documentElement.style.overflowX = "hidden";
-
-        // requestAnimationFrame(closeOverlay);
     }
 
     return (
