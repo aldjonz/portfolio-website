@@ -145,12 +145,25 @@
     transform-origin: left;
     text-align: right;
     transition-duration: 0.3s;
+    display: flex;
+    cursor: pointer;
 }
-.titleTag p {
+.titleTagText {
     transform-origin: center;
     transform: rotateZ(180deg);
     font-size: 4.2vh;
     margin: 0;
+}
+.titleTagLink {
+    width: fit-content;
+    transform-origin: center;
+    margin-left: auto;
+    margin-right: 2vh;
+    transform: rotateZ(-90deg);
+    font-size: 2.1vh;
+    text-align: left;
+    color: #a5675d;
+    font-weight: 100;
 }
 .tag {
     position: absolute;

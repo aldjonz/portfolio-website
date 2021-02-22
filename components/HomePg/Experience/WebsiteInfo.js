@@ -66,19 +66,14 @@ function WebsiteInfo(props) {
                                     />
                                 </div>
                                 {isDesktopLg ? 
-                                    <div className={styles.titleTag} onClick={openInfoTab} style={{ transform: `rotateZ(90deg) translateY(${headerPos})` }}><p>{objArr.title}</p></div> :
+                                    <div className={styles.titleTag} onClick={openInfoTab} style={{ transform: `rotateZ(90deg) translateY(${headerPos})` }}>
+                                        <p className={styles.titleTagText}>{objArr.title}</p>
+                                        <p className={styles.titleTagLink}>Learn <br/>More</p>
+                                    </div> :
                                     null
                                 }
                                 <div className={styles.experienceInfoContainer} style={{ transform: isDesktopLg ? `translateX(${infoPos})` : null, right: props.carouselPos }}>
-            
-                                    {/* {isDesktopLg ? 
-                                    <div className={styles.tag} onClick={toggleInfoWidth} style={{ transform: `translateX(${tagPos})` }}>
-                                        {infoPos === '0' ? 
-                                            <FontAwesomeIcon className={styles.icon} icon={faChevronRight} /> :
-                                            <FontAwesomeIcon className={styles.icon} icon={faChevronLeft} />
-                                        }
-                                    </div> : null } */}
-
+        
                                     <div className={styles.projectTitle}>
                                         <h2>{objArr.title}</h2>
                                     </div>  
