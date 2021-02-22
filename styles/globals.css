@@ -178,8 +178,6 @@ a {
   z-index: 1;
   position: relative;
   background: transparent;
-  /* transform: scale(6); */
-  /* transform: scale3d(1,1,1); */
   transition-duration: 1s;
 }
 .svgEl {
@@ -190,10 +188,13 @@ a {
   margin: auto;
   background: transparent;
   display: block;
+  width: 100vw;
   z-index: 1;
   position: absolute;
-  bottom: -300px;
+  bottom: -320px;
   transform: rotateZ(180deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
 }
 .overlapAnimation1 {
   margin: auto;

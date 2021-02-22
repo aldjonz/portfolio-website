@@ -19,6 +19,8 @@
     transform-origin: left;
     left: 80vw;
     position: absolute;
+    -webkit-text-stroke: transparent;
+    text-stroke: transparent;
 }
 .techWrapper {
     width: 80vw;
