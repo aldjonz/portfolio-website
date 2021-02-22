@@ -523,6 +523,26 @@ a {
   padding-top: 5vh;
 }
 
+.carousel__slide--hidden img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transform: scale(0.99);
+  transition-duration: 2s;
+  transition-delay: 0.5s;
+}
+.carousel__slide--visible img {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);  
+  transition-duration: 2s;
+  transition-delay: 0.5s;
+}
+.carousel__slide--focused img {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);  
+  transition-duration: 2s;
+  transition-delay: 0.5s;
+}
+
 @media only screen and (orientation: landscape) {
 
   /* .svgBody {

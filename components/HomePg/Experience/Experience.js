@@ -73,60 +73,14 @@ const Experience =(props) => {
         },
     ];
 
-    const dragSlider = (e) => {
-        let posX = e.clientX
-        let width = window.innerWidth;
-        let mouseDif = initialMousePos - posX;
-
-        setCurrentMousePos(posX);
-        setMousePosDif(mouseDif);
-        setSliderPos(prevState => prevState);
-
-        
-        console.log(initialMousePos, mouseDif);
-
-    }
-
-    const handleDragEnd = (e) => {
-        expRef.current.removeEventListener('mousemove', dragSlider, true);
-
-        let finalPosX = e.clientX;
-
-        setFinalMousePos(finalPosX);
-
-    }
-
-    const handleDragStart = (e) => {
-        let initialPosX = e.clientX;
-        setInitialMousePos(initialPosX);
-
-        expRef.current.addEventListener('mousemove', dragSlider, true);
-        expRef.current.addEventListener('mouseup', handleDragEnd, true)
-
-    }
-
-
-
-    const handleKeyDown = (e) => {
-        if(e.keyCode === 37 && sliderPos < 0) {
-            setSliderPos(prevState => prevState + 100);
-        } else if (e.keyCode === 39 && sliderPos > (projectProperties.length - 1) * -100 ) {
-            setSliderPos(prevState => prevState - 100);
-        }
-        // console.log(sliderPos)
-    }
-
     return (
-        <div ref={expRef} className={styles.experienceContainer} onKeyDown={e => handleKeyDown(e)} onMouseDown={e => handleDragStart(e)} >
-            {/* <div className={styles.experienceBg}> */}
-                {/* <ExperienceBg /> */}
-            {/* </div> */}
-                <WebsiteInfo
-                    projectProps={projectProperties} 
-                    carouselPos={carouselPos}
-                    isDesktopLg={props.isDesktopLg}
-                    sliderPos={sliderPos}
-                />
+        <div ref={expRef} className={styles.experienceContainer} >
+            <WebsiteInfo
+                projectProps={projectProperties} 
+                carouselPos={carouselPos}
+                isDesktopLg={props.isDesktopLg}
+                sliderPos={sliderPos}
+            />
         </div>
     );
 };
