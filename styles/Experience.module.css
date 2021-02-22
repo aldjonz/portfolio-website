@@ -180,7 +180,7 @@
     }
     .projectTitle {
         height: 30vh;
-        
+        padding-top: 0;
     }
     .projectTitle h2 {
         font-size: 4.2vw;
@@ -201,7 +201,15 @@
         height: 4.4vw;
     }
 }
+@media only screen and (min-height: 300px) and (orientation: landscape) {
+    .projectTitle {
+        padding-top: 2vh;
+    }
+}
 @media only screen and (min-height: 600px) and (orientation: landscape) {
+    .projectTitle {
+        padding-top: 5vh;
+    }
     .projectDescription {
         height: 54vh;
     }
