@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useMediaQuery, useWindowSize } from '../../Hooks/hooks';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import styles from '../../../styles/Experience.module.css';
 import WebsiteImgCarousel from './WebsiteImgCarousel';
 
@@ -31,25 +29,25 @@ function WebsiteInfo(props) {
         setInfoPos('200%');
     }
 
-    const updateDimensions = () => {
-        setWindowHeight(window.innerHeight);
-        setWindowWidth(window.innerWidth);
-    }
+    // const updateDimensions = () => {
+    //     setWindowHeight(window.innerHeight);
+    //     setWindowWidth(window.innerWidth);
+    // }
 
-    useEffect(() => {
-        updateDimensions();
-        window.addEventListener('resize', updateDimensions);
+    // useEffect(() => {
+    //     updateDimensions();
+    //     window.addEventListener('resize', updateDimensions);
 
-        return () => {
-            window.removeEventListener('resize', updateDimensions);
-        }
-    },[])
+    //     return () => {
+    //         window.removeEventListener('resize', updateDimensions);
+    //     }
+    // },[])
 
     return (
         <CarouselProvider
             ref={carouselRef}
-            naturalSlideWidth={windowWidth}
-            naturalSlideHeight={windowHeight}
+            naturalSlideWidth={width}
+            naturalSlideHeight={height}
             totalSlides={props.projectProps.length}
             isPlaying={true}
             interval={8000}
@@ -62,7 +60,7 @@ function WebsiteInfo(props) {
                             <div className={styles.carouselContainer} >    
                                 <div className={styles.imgCarouselContainer} onClick={closeInfoTab} style={{ left: props.carouselPos }}>
                                     <WebsiteImgCarousel 
-                                        projectImages={objArr.img}
+                                        projectProps={objArr}
                                     />
                                 </div>
                                 {isDesktopLg ? 
@@ -82,11 +80,11 @@ function WebsiteInfo(props) {
                                         <p>{objArr.text}</p>
                                     </div>
 
-                                    <a href={objArr.link.url}>
+                                    {/* <a href={objArr.link.url}>
                                         <div className={styles.linkWrapper} >
                                             <span>{objArr.link.title}</span>
                                         </div>
-                                    </a>
+                                    </a> */}
                                 </div>
                             </div>
                         </Slide>

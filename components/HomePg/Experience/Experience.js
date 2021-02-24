@@ -22,7 +22,7 @@ const Experience =(props) => {
     useEffect(() => {
         if(!isDesktopLg) {
             if(isVisible) {
-                setCarouselPos('-25%');
+                setCarouselPos('-20%');
             } else {
                 setCarouselPos('0%');
             }
@@ -32,44 +32,48 @@ const Experience =(props) => {
     const projectProperties = [
         {
             id: '0',
+            orientation: 'portrait',
             title: 'Delpero Freight',
-            text: 'Delpero Freight Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio.',
+            text: 'Delpero Freight is a virtual trucking company for the popular games European Truck Simulator and Euro Truck Simulator. When building this website I used Next.js with CSS. I really developed my understanding of scroll and page transition animations in this project.',
             img: [
-                'https://images.unsplash.com/photo-1612219081356-5b8e07ca3b6d?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cm5TS0RId3dZVWt8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                'https://images.unsplash.com/photo-1612203067417-e94daab1bed2?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDd8cm5TS0RId3dZVWt8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                'https://images.unsplash.com/photo-1468127225977-85bc4aa3fe0f?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDI5fHJuU0tESHd3WVVrfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                'https://images.unsplash.com/photo-1483397242829-5a301431e002?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDMzfHJuU0tESHd3WVVrfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+                '/images/delpero-freight-img-0.png',
+                '/images/delpero-freight-img-1.png',
+                '/images/delpero-freight-img-2.png',
             ],
-            link: {
-                title: 'delperofreight.com',
-                url: '/https://delperofreight.com/',
-            },
+            // link: {
+            //     title: 'delperofreight.com',
+            //     url: '/https://delperofreight.com/',
+            // },
         },
         {
             id: '1',
-            title: 'Personal Project',
-            text: 'Personal Projec Text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio.',
+            orientation: 'landscape',
+            title: 'Antur Expeditions',
+            text: 'Antur Expeditions is a hypothetical outdoor adventure sports and expedition company. I built the entire landscape in CSS and really enhanced my knowledge of CSS animations. The sky changes colour depending on the time of day that the user accesses the website as well as the shadows changing position depending on the position of the sun.',
             img: [
-                'https://images.unsplash.com/photo-1613047503507-b8d01ce6af26?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDd8Sjl5clBhSFhSUVl8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                'https://images.unsplash.com/photo-1612677318581-c9cb7197d0a6?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8Sjl5clBhSFhSUVl8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                // '/images/antur-img-0.png',
+                '/images/antur-img-1.png',
+                '/images/antur-img-2.png',
+                '/images/antur-img-3.png',
             ],
-            link: {
-                title: 'heloo.com',
-                url: ''
-            }
+            // link: {
+            //     title: 'heloo.com',
+            //     url: ''
+            // }
         },
         {
             id: '2',
-            title: 'Personal Project 2',
-            text: 'Personal Projec Text 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio.',
+            orientation: 'landscape',
+            title: 'Ahoj Tours',
+            text: 'Ahoj Tours is a hypothetical city tour and guide company. One of my first projects in Next.js, it mainly came about in order to develop my skill with the technology and my eye for web design.',
             img: [
-                'https://images.unsplash.com/photo-1613047503507-b8d01ce6af26?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDd8Sjl5clBhSFhSUVl8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-                'https://images.unsplash.com/photo-1612677318581-c9cb7197d0a6?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8Sjl5clBhSFhSUVl8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                '/images/ahoj-img-0.png',
+                '/images/ahoj-img-1.png',
             ],
-            link: {
-                title: 'heloo2.com',
-                url: ''
-            }
+            // link: {
+            //     title: 'heloo2.com',
+            //     url: ''
+            // }
         },
     ];
 

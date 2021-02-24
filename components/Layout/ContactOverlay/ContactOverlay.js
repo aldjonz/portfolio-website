@@ -41,7 +41,6 @@ const ContactOverlay = () => {
         if(prevXPos === '200%') {
             setOverlayXPos('-200%');
             setPrevXPos('-200%');
-            console.log(prevXPos);
         } else { 
             setOverlayXPos('200%');
             setPrevXPos('200%');
