@@ -1,42 +1,28 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Slider from "react-slick";
+import React, { useRef } from 'react';
+// import Slider from "react-slick";
 import { useWindowSize } from '../../Hooks/hooks';
+
+// import { CarouselProvider, Slider, Slide, ButtonNext } from 'pure-react-carousel';
+// import 'pure-react-carousel/dist/react-carousel.es.css';
+import Carousel from 'nuka-carousel';
 
 import styles from '../../../styles/Experience.module.css';
 
 const WebsiteImgCarousel = (props) => {
     const imgRef = useRef();
+    const sliderRef = useRef('');
 
     const [width, height] = useWindowSize();
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 1500,
-        autoplaySpeed: 8000,
-        centerMode: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        vertical: true,
-        draggable: false,
-        autoplay: true,
-        centerPadding: '0px',
-        arrows: false,
-        pauseOnFocus: true,
-        pauseOnHover: false,
-        easing: 'ease-in-out',
-        fade: true
-    };
-
     let displayImagesLandscape = props.projectProps.img.map((image, i) => {
         return (
-            <Slider>
-                <div key={i} className={styles.websiteImg}>
-                    <img src={image} alt="bgImg" />
-                </div>
-            </Slider>
+            <div className={styles.websiteImg} key={i}>
+                <img src={image} alt="bgImg" />
+            </div>
         );
     });
+
+    
 
     let displayImagesPortrait = props.projectProps.img.length < 3 ? 
         <div className={styles.websiteImg}>
@@ -60,8 +46,39 @@ const WebsiteImgCarousel = (props) => {
         </div>;
                 
     return(
-        <div ref={imgRef} className={styles.imgContainer}>
-            {height < width ? displayImagesLandscape : displayImagesPortrait}
+        <div ref={imgRef} className={styles.imgContainer} >
+            {height < width ?    
+                <Carousel
+                    autoplay={true}
+                    dragging={false}
+                    swiping={false}
+                    pauseOnHover={false}
+                    wrapAround={true}
+                    speed={2000}
+                    width="100%"
+                    defaultControlsConfig={{
+                        nextButtonText: ' ',
+                        nextButtonStyle: {
+                            background: 'none',
+                            // fontFamily: 'Poppins, sans-serif'
+                            cursor: 'unset',
+                        },
+                        prevButtonText: ' ',
+                        prevButtonStyle: {
+                            background: 'none',
+                            // fontFamily: 'Poppins, sans-serif',
+                            cursor: 'unset',
+                        },
+                        pagingDotsStyle: {
+                            fill: 'none',
+                            cursor: 'unset',
+                          }
+                      }}
+                >
+                    {displayImagesLandscape} 
+                </Carousel>
+                : displayImagesPortrait
+            }
         </div>
     );
 };
