@@ -50,7 +50,7 @@ function WebsiteInfo(props) {
             naturalSlideHeight={height}
             totalSlides={props.projectProps.length}
             isPlaying={true}
-            interval={8000}
+            interval={10000}
         >
             <div className={styles.carouselWrapper}>
                 <Slider>

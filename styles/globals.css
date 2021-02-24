@@ -520,6 +520,15 @@ a {
   }
 }
 
+.imgCarouselAnim {
+  animation: fadeIn ease 4s;
+}
+
+@keyframes fade {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
 /* removes outline on carousel*/
 .carousel__slide {
   outline: none !important;

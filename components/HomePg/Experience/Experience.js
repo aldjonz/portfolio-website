@@ -39,6 +39,10 @@ const Experience =(props) => {
                 '/images/delpero-freight-img-0.png',
                 '/images/delpero-freight-img-1.png',
                 '/images/delpero-freight-img-2.png',
+                '/images/delpero-freight-img-3.png',
+                '/images/delpero-freight-img-4.png',
+                '/images/delpero-freight-img-5.png',
+                '/images/delpero-freight-img-6.png',
             ],
             // link: {
             //     title: 'delperofreight.com',
@@ -51,10 +55,9 @@ const Experience =(props) => {
             title: 'Antur Expeditions',
             text: 'Antur Expeditions is a hypothetical outdoor adventure sports and expedition company. I built the entire landscape in CSS and really enhanced my knowledge of CSS animations. The sky changes colour depending on the time of day that the user accesses the website as well as the shadows changing position depending on the position of the sun.',
             img: [
-                // '/images/antur-img-0.png',
+                '/images/antur-img-0.png',
                 '/images/antur-img-1.png',
                 '/images/antur-img-2.png',
-                '/images/antur-img-3.png',
             ],
             // link: {
             //     title: 'heloo.com',
