@@ -2,17 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useMediaQuery } from '../../Hooks/hooks';
 import styles from '../../../styles/Experience.module.css';
 import { useIsVisible } from 'react-is-visible';
-import ExperienceBg from '../../svgAnimations/experienceBg';
-
 import WebsiteInfo from './WebsiteInfo';
 
 const Experience =(props) => {
     const [carouselPos, setCarouselPos] = useState('0');
-    const [sliderPos, setSliderPos] = useState(0);
-    const [initialMousePos, setInitialMousePos] = useState(0);
-    const [finalMousePos, setFinalMousePos] = useState(0);
-    const [currentMousePos, setCurrentMousePos] = useState(0);
-    const [mousePosDif, setMousePosDif] = useState();
 
     const isDesktopLg = useMediaQuery(1400);
 
@@ -85,8 +78,7 @@ const Experience =(props) => {
             <WebsiteInfo
                 projectProps={projectProperties} 
                 carouselPos={carouselPos}
-                isDesktopLg={props.isDesktopLg}
-                sliderPos={sliderPos}
+                isDesktopLg={isDesktopLg}
             />
         </div>
     );

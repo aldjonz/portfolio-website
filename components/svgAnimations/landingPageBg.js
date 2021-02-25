@@ -17,14 +17,12 @@ const LandingPageBg = (props) => {
                 setTimeout(() => {
                     el.style.stroke = strokeColour;
                     el.style.fill = colour0;
-                    // el.style.fill = props.primaryColourArr[el.id];
                     el.style.opacity = "0.4";
                 }, i * 20)
             } else {
                 setTimeout(() => {
                     el.style.stroke = strokeColour;
                     el.style.fill = colour2;
-                    // el.style.fill = props.primaryColourArr[el.id];
                     el.style.opacity = "0.4";
                 }, i * 20)
             }

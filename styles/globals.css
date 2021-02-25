@@ -9,19 +9,6 @@
     --designer-delay: 7.7s;
   }
 }
-/* ::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 4 6px rgba(0,0,0,0.3); 
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 4 6px rgba(0,0,0,0.5); 
-} */
 
 html,
 body {
@@ -162,7 +149,7 @@ a {
   background-position: 0 100%;
 }
 
-
+/* Landing SVG */
 .svgContainer {
   width: 100%;
   overflow: hidden;
@@ -208,6 +195,7 @@ a {
   transform: rotateZ(-10deg);
 }
 
+/* Skills Section Tech Icons */
 .techIcon {
   text-align: center;
   width: 45%;
@@ -234,6 +222,7 @@ a {
   opacity: 1;
 }
 
+/* Social Media Links */
 .socialMediaLinksContainer {
   position: absolute;
   bottom: 1vh;
@@ -249,7 +238,7 @@ a {
   margin-right: 2vw;
 }
 
-/* SVG Text */
+/* SVG Text: name, frontend, developer + designer */
 #titleName {
   position: absolute;
   top: 16vh;
@@ -260,9 +249,6 @@ a {
   max-height: 200px;
   stroke: #d6d6d6;
 }
-/* .nameSvgAnim {
-  animation: fill 2s forwards ease forwards 2.7s;
-} */
 .nameSvgAnim path:nth-child(2) {
   stroke-dasharray: 535;
   stroke-dashoffset: 535;
@@ -395,10 +381,10 @@ a {
 }
 
 .developer {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  overflow: hidden;
   border-right: solid 4px transparent;
   white-space: nowrap; 
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  margin: 0 auto;
   font-family: 'IBM Plex Mono', monospace;
   width: 0%;
 }
@@ -407,13 +393,9 @@ a {
     blink-caret .75s step-end 7 4s,
     typing 4s steps(40, end) forwards 5s;
 }
-
-/* The typing effect */
 @keyframes typing {
   to { width: 100% }
 }
-
-/* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: rgba(0,0,0,0.6); }
@@ -424,7 +406,6 @@ a {
   margin-top: 2.5vh;
   height: 100%;
   width: 54vw;
-  /* max-width: 440px; */
   z-index: 10;
 }
 .designerMask {
@@ -439,7 +420,7 @@ a {
 .designerAnim path:nth-child(9) {
   stroke-dashoffset: 430;
   stroke-dasharray: 430;
-  animation: strokeOffset 0.4s linear forwards var(--designer-delay); /*8.8s*/
+  animation: strokeOffset 0.4s linear forwards var(--designer-delay);
 }
 .designer path:nth-child(8) {
   stroke-dashoffset: 365;
@@ -448,7 +429,7 @@ a {
 .designerAnim path:nth-child(8) {
   stroke-dashoffset: 365;
   stroke-dasharray: 365;
-  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 0.3s); /*9.1s*/
+  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 0.3s);
 }
 .designer path:nth-child(7) {
   stroke-dashoffset: 296;
@@ -457,7 +438,7 @@ a {
 .designerAnim path:nth-child(7) {
   stroke-dashoffset: 296;
   stroke-dasharray: 296;
-  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 0.6s); /*9.4s*/
+  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 0.6s);
 }
 .designer path:nth-child(6) {
   stroke-dashoffset: 57;
@@ -466,7 +447,7 @@ a {
 .designerAnim path:nth-child(6) {
   stroke-dashoffset: 57;
   stroke-dasharray: 57;
-  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 0.9s); /*9.7s*/
+  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 0.9s);
 }
 .designer path:nth-child(5) {
   stroke-dashoffset: 135;
@@ -475,7 +456,7 @@ a {
 .designerAnim path:nth-child(5) {
   stroke-dashoffset: 135;
   stroke-dasharray: 135;
-  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 1.2s); /*10s*/
+  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 1.2s);
 }
 .designer path:nth-child(4) {
   stroke-dashoffset: 469;
@@ -484,7 +465,7 @@ a {
 .designerAnim path:nth-child(4) {
   stroke-dashoffset: 469;
   stroke-dasharray: 469;
-  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 1.5s); /*11.3s*/
+  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 1.5s);
 }
 .designer path:nth-child(3) {
   stroke-dashoffset: 371;
@@ -493,7 +474,7 @@ a {
 .designerAnim path:nth-child(3) {
   stroke-dashoffset: 371;
   stroke-dasharray: 371;
-  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 1.8s); /*11.6s*/
+  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 1.8s);
 }
 .designer path:nth-child(2) {
   stroke-dashoffset: 360;
@@ -502,7 +483,7 @@ a {
 .designerAnim path:nth-child(2) {
   stroke-dashoffset: 360;
   stroke-dasharray: 360;
-  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 2.1s); /*11.9s*/
+  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 2.1s);
 }
 .designer path:nth-child(1) {
   stroke-dashoffset: 246;
@@ -511,7 +492,7 @@ a {
 .designerAnim path:nth-child(1) {
   stroke-dashoffset: 246;
   stroke-dasharray: 246;
-  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 2.4s); /*12.2s*/
+  animation: strokeOffset 0.4s linear forwards calc(var(--designer-delay) + 2.4s);
 }
 
 @keyframes strokeOffset {
@@ -520,14 +501,36 @@ a {
   }
 }
 
-.imgCarouselAnim {
-  animation: fadeIn ease 4s;
+/* Next + prev carousel buttons */
+.sliderButtonNext {
+  display: none;
+}
+.sliderButtonBack {
+  display: none;
+}
+.carouselNextImg {
+  position: absolute;
+  z-index: 14;
+  top: 0;
+  left: 0;
+  height: 90vh;
+  width: 50%;
+  background: transparent;
+  border: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+.carouselBackImg {
+  position: absolute;
+  z-index: 14;
+  top: 0;
+  right: 0;
+  height: 90vh;
+  width: 50%;
+  background: transparent;
+  border: none !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
-@keyframes fade {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
 
 /* removes outline on carousel*/
 .carousel__slide {
@@ -561,12 +564,7 @@ a {
 }
 
 @media only screen and (orientation: landscape) {
-
-  /* .svgBody {
-    transform: scale(6);
-    height: 100vw;
-  } */
-
+  /* Layout */
   .closeLeft {
     height: 3vw;
   }
@@ -590,24 +588,7 @@ a {
     font-size: 3vw;
   }
 
-  .carouselButton {
-    width: 24vh;
-    font-size: 2.8vh;
-  }
-  .wrap {
-    width: 7vw;
-    height: 14vw;
-    left: 0;
-  }
-  .ripple {
-    width: 14vw;
-    height: 14vh;
-  }
-  .ripple .ripple-svg {
-    width: 14vw;
-    height: 14vh;
-  }
-
+  /* Skills section tech icon */
   .techIcon {
     font-size: 1.3vw;
     width: 25%;
@@ -617,6 +598,7 @@ a {
     width: 8vw;
   }
 
+  /* SVG name + desginer */
   #titleName {
     left: 4vw;
     height: 14vw;
@@ -626,10 +608,6 @@ a {
   }
 }
 @media only screen and (min-height: 600px) and (orientation: landscape) {
-  .carouselButton {
-    width: 18vh;
-    height: 40px;
-  }
   .techIcon img {
     width: 6vw;
     height: 6vw;
@@ -637,31 +615,27 @@ a {
 }
 
 @media only screen and (orientation: landscape) and (min-width: 1000px) {
+  /* SVG Landing */
   .svgBody {
     height: 4000px;
     width: 4000px;
     margin-top: -1400px;
     margin-left: -1700px;
   }
+  /* contact */
   .emailAddressContainer {
     margin: 28vh auto auto;
   }
 }
-@media only screen and (min-width: 1400px) and (orientation: landscape) {
-  .carouselButton {
-    width: 12vh;
-    height: 34px;
-    font-size: 2vh;
-  }
-}
-
 @media only screen and (min-width: 600px) and (orientation: portrait) {
+  /* SVG Landing */
   .svgBody {
     height: 4000px;
     width: 4000px;
     margin-top: -1400px;
     margin-left: -1800px;
   }
+  /* SVG titles */
   #titleName {
     top: 20vh;
   }
@@ -670,21 +644,46 @@ a {
   }
 }
 @media only screen and (min-width: 1200px) {
-  .closeButtonContainer {
-    margin-left: auto;
-    margin-right: 17px;
-  }
   .contactDetailsContainer {
     padding-top: 17px;
   }
+  /* Next + prev buttons for carousel */
+  .sliderButtonNext {
+    display: unset;
+    position: absolute;
+    right: 2vw;
+    top: 50vh;
+    background: transparent;
+    border: none !important;
+    color: #d6d6d6;
+    font-size:2.6vh;
+    transform: translateY(-50%);
+      -webkit-tap-highlight-color: transparent;
+    outline: none;
+  }
+  .sliderButtonBack {
+    display: unset;
+    position: absolute;
+    left: 2vw;
+    top: 50vh;
+    background: transparent;
+    border: none !important;
+    color: #d6d6d6;
+    font-size:2.6vh;
+    transform: translateY(-50%);
+      -webkit-tap-highlight-color: transparent;
+    outline: none;
+  }
 }
 @media only screen and (min-width: 1400px) {
+  /* SVG Landing */
   .svgBody {
     height: 6000px;
     width: 6000px;
     margin-top: -2200px;
     margin-left: -2200px;
   }
+  /* Layout */
   .contactButtonWrapper {
     font-size: 20px;
   }
@@ -693,16 +692,6 @@ a {
   #titleName {
     top: 16vh
   }
-}
-@media only screen and (min-height: 1000px) {
-  .carouselButton {
-    height: 44px;
-  }
-}
-@media only screen and (min-width: 700px) and (min-height: 340px) and (max-width: 900px) and (max-height: 415px) {
-  /* .overlapAnimation0 {
-    bottom: -320px;
-  } */
 }
 @media (pointer: fine) {
   .techIcon {

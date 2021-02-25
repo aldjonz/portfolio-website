@@ -1,24 +1,22 @@
 import React, { useRef } from 'react';
-// import Slider from "react-slick";
-import { useWindowSize } from '../../Hooks/hooks';
-
-// import { CarouselProvider, Slider, Slide, ButtonNext } from 'pure-react-carousel';
-// import 'pure-react-carousel/dist/react-carousel.es.css';
-import Carousel from 'nuka-carousel';
-
 import styles from '../../../styles/Experience.module.css';
+import { useWindowSize } from '../../Hooks/hooks';
+import { CarouselProvider, Slider, Slide, ButtonNext, ButtonBack } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+
 
 const WebsiteImgCarousel = (props) => {
     const imgRef = useRef();
-    const sliderRef = useRef('');
 
     const [width, height] = useWindowSize();
 
     let displayImagesLandscape = props.projectProps.img.map((image, i) => {
         return (
-            <div className={styles.websiteImg} key={i}>
-                <img src={image} alt="bgImg" />
-            </div>
+            <Slide index={i} key={i}>
+                <div className={styles.websiteImg}>
+                    <img src={image} alt="bgImg" />
+                </div>
+            </Slide>
         );
     });
 
@@ -47,40 +45,23 @@ const WebsiteImgCarousel = (props) => {
                 
     return(
         <div ref={imgRef} className={styles.imgContainer} >
+            
             {height < width ?    
-                <Carousel
-                    autoplay={true}
-                    dragging={false}
-                    swiping={false}
-                    pauseOnHover={false}
-                    wrapAround={true}
-                    speed={2000}
-                    width="100%"
-                    defaultControlsConfig={{
-                        nextButtonText: ' ',
-                        nextButtonStyle: {
-                            background: 'transparent',
-                            height: '90vh',
-                            width: '40vw',
-                            marginTop: '-10vh',
-                            cursor: 'unset',
-                        },
-                        prevButtonText: ' ',
-                        prevButtonStyle: {
-                            background: 'transparent',
-                            height: '90vh',
-                            width: '40vw',
-                            marginTop: '-10vh',
-                            cursor: 'unset',
-                        },
-                        pagingDotsStyle: {
-                            fill: 'none',
-                            cursor: 'unset',
-                          }
-                      }}
+                <CarouselProvider
+                    naturalSlideWidth={width}
+                    naturalSlideHeight={height * 1.8}
+                    totalSlides={props.projectProps.img.length}
+                    isPlaying={true}
+                    interval={4000}
+                    dragEnabled={false}
+                    infinite={true}
                 >
-                    {displayImagesLandscape} 
-                </Carousel>
+                    <Slider>
+                        {displayImagesLandscape} 
+                    </Slider>
+                    <ButtonBack className="carouselNextImg" onClick={props.closeInfoTab}></ButtonBack>
+                    <ButtonNext className="carouselBackImg" onClick={props.closeInfoTab}></ButtonNext>
+                </CarouselProvider>
                 : displayImagesPortrait
             }
         </div>

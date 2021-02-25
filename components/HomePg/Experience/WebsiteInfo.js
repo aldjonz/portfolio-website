@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useMediaQuery, useWindowSize } from '../../Hooks/hooks';
-
+import React, { useState, useRef } from 'react';
+import { useWindowSize } from '../../Hooks/hooks';
 import styles from '../../../styles/Experience.module.css';
 import WebsiteImgCarousel from './WebsiteImgCarousel';
-
-import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { CarouselProvider, Slider, Slide, ButtonNext, ButtonBack } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 function WebsiteInfo(props) {
@@ -14,7 +14,6 @@ function WebsiteInfo(props) {
     const carouselRef = useRef('');
 
     const [width, height] = useWindowSize();
-    const isDesktopLg = useMediaQuery(1400);
     
     const openInfoTab = () => {
         setInfoPos('0');
@@ -26,20 +25,6 @@ function WebsiteInfo(props) {
         setInfoPos('200%');
     }
 
-    // const updateDimensions = () => {
-    //     setWindowHeight(window.innerHeight);
-    //     setWindowWidth(window.innerWidth);
-    // }
-
-    // useEffect(() => {
-    //     updateDimensions();
-    //     window.addEventListener('resize', updateDimensions);
-
-    //     return () => {
-    //         window.removeEventListener('resize', updateDimensions);
-    //     }
-    // },[])
-
     return (
         <CarouselProvider
             ref={carouselRef}
@@ -48,9 +33,10 @@ function WebsiteInfo(props) {
             totalSlides={props.projectProps.length}
             isPlaying={true}
             interval={10000}
+            infinite={true}
         >
             <div className={styles.carouselWrapper}>
-                <Slider>
+                <Slider moveThreshold={0.3}>
                 {props.projectProps.map((objArr) => {
                     return (
                         <Slide index={objArr.id} key={objArr.id} className="carouselStyle">
@@ -61,14 +47,14 @@ function WebsiteInfo(props) {
                                         closeInfoTab={closeInfoTab}
                                     />
                                 </div>
-                                {isDesktopLg ? 
+                                {props.isDesktopLg ? 
                                     <div className={styles.titleTag} onClick={openInfoTab} style={{ transform: `rotateZ(90deg) translateY(${headerPos})` }}>
                                         <p className={styles.titleTagText}>{objArr.title}</p>
                                         <p className={styles.titleTagLink}>Learn <br/>More</p>
                                     </div> :
                                     null
                                 }
-                                <div className={styles.experienceInfoContainer} style={{ transform: isDesktopLg ? `translateX(${infoPos})` : null, right: props.carouselPos }}>
+                                <div className={styles.experienceInfoContainer} style={{ transform: props.isDesktopLg ? `translateX(${infoPos})` : null, right: props.carouselPos }}>
         
                                     <div className={styles.projectTitle}>
                                         <h2>{objArr.title}</h2>
@@ -89,6 +75,12 @@ function WebsiteInfo(props) {
                     ) 
                 })} 
                 </Slider>
+                <ButtonNext className="sliderButtonNext">
+                    <FontAwesomeIcon icon={faChevronRight} />
+                </ButtonNext>
+                <ButtonBack className="sliderButtonBack">
+                    <FontAwesomeIcon icon={faChevronLeft} />
+                </ButtonBack>
             </div>  
         </CarouselProvider>
     );

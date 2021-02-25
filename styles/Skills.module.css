@@ -19,9 +19,11 @@
     transform-origin: left;
     left: 80vw;
     position: absolute;
-    -webkit-text-stroke: transparent;
-    -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,1px);
+    -moz-transform: translate3d(0,0,1px);
+     -ms-transform: translate3d(0,0,1px);
+      -o-transform: translate3d(0,0,1px);
+         transform: translate3d(0,0,1px);
     stroke: transparent;
 }
 .techWrapper {

@@ -1,7 +1,7 @@
 const nameSvg = (props) => (
-        <svg id="titleName" className={props.svgLoaded ? 'nameSvgAnim' : 'nameSvg'} width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 759 137" /*fill="#d6d6d6"8*/ xmlns="http://www.w3.org/2000/svg">
-            <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.0880127" y="0.415985" width="100%" height="100%" /*fill="#d6d6d6"*/>
-            <rect /* fill="#d6d6d6"*/ x="0.0880127" y="0.415985" width="100%" height="100%"/>
+        <svg id="titleName" className={props.svgLoaded ? 'nameSvgAnim' : 'nameSvg'} width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 759 137" xmlns="http://www.w3.org/2000/svg">
+            <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.0880127" y="0.415985" width="100%" height="100%">
+            <rect x="0.0880127" y="0.415985" width="100%" height="100%"/>
             <path fill={props.fillTitle} d="M80.416 12.632V113H67.312V67.496H16.192V113H3.08801V12.632H16.192V56.696H67.312V12.632H80.416Z"/>
             <path fill={props.fillTitle} d="M109.559 21.272C107.063 21.272 104.951 20.408 103.223 18.68C101.495 16.952 100.631 14.84 100.631 12.344C100.631 9.84799 101.495 7.73599 103.223 6.00799C104.951 4.27999 107.063 3.41599 109.559 3.41599C111.959 3.41599 113.975 4.27999 115.607 6.00799C117.335 7.73599 118.199 9.84799 118.199 12.344C118.199 14.84 117.335 16.952 115.607 18.68C113.975 20.408 111.959 21.272 109.559 21.272ZM115.895 34.088V113H102.791V34.088H115.895Z"/>
             <path fill={props.fillTitle} d="M151.765 94.856L135.637 133.592H126.853L137.365 94.856H151.765Z"/>

@@ -1,7 +1,7 @@
 import styles from '../../styles/Intro.module.css';
 import IntroBg from '../svgAnimations/introBg';
 
-const Intro = (props) => {
+const Intro = () => {
 
     return (
         <div className={styles.introContainer}>

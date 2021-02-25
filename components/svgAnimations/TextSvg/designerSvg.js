@@ -1,26 +1,4 @@
-import { useState, useEffect } from 'react';
-
-const designerSvg = (props) => {
-    const [svgClass, setSvgClass] = useState("designer");
-    const [iterationReq, setIterationReq] = useState();
-
-    // useEffect(() => {
-    //     let width = window.innerWidth;
-    //     let height = window.innerHeight;
-
-    //     if(width < height) {
-    //         if(props.iterationCounter === 6) {
-    //             setSvgClass("designerAnim designer")
-    //         }
-    //     } else if(height < width) {
-    //         if(props.iterationCounter === 5) {
-    //             setSvgClass("designerAnim designer")
-    //         }
-    //     };
-    // })
-
-
-    return (
+const designerSvg = (props) => (
     
         <svg className={ props.svgLoaded ? "designerAnim designer" : "designer" } width="100%" height="100%" viewBox="0 0 490 132" fill="none" xmlns="http://www.w3.org/2000/svg">
             
@@ -50,6 +28,5 @@ const designerSvg = (props) => {
         </svg>
 
     );
-};
 
 export default designerSvg;
