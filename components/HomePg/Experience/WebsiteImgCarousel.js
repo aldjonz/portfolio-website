@@ -59,14 +59,18 @@ const WebsiteImgCarousel = (props) => {
                     defaultControlsConfig={{
                         nextButtonText: ' ',
                         nextButtonStyle: {
-                            background: 'none',
-                            // fontFamily: 'Poppins, sans-serif'
+                            background: 'transparent',
+                            height: '90vh',
+                            width: '40vw',
+                            marginTop: '-10vh',
                             cursor: 'unset',
                         },
                         prevButtonText: ' ',
                         prevButtonStyle: {
-                            background: 'none',
-                            // fontFamily: 'Poppins, sans-serif',
+                            background: 'transparent',
+                            height: '90vh',
+                            width: '40vw',
+                            marginTop: '-10vh',
                             cursor: 'unset',
                         },
                         pagingDotsStyle: {

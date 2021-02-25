@@ -36,13 +36,13 @@ const Experience =(props) => {
             title: 'Delpero Freight',
             text: 'Delpero Freight is a virtual trucking company for the popular games European Truck Simulator and Euro Truck Simulator. When building this website I used Next.js with CSS. I really developed my understanding of scroll and page transition animations in this project.',
             img: [
-                '/images/delpero-freight-img-0.png',
-                '/images/delpero-freight-img-1.png',
-                '/images/delpero-freight-img-2.png',
-                '/images/delpero-freight-img-3.png',
-                '/images/delpero-freight-img-4.png',
-                '/images/delpero-freight-img-5.png',
-                '/images/delpero-freight-img-6.png',
+                '/Images/delpero-freight-img-0.png',
+                '/Images/delpero-freight-img-1.png',
+                '/Images/delpero-freight-img-2.png',
+                '/Images/delpero-freight-img-3.png',
+                '/Images/delpero-freight-img-4.png',
+                '/Images/delpero-freight-img-5.png',
+                '/Images/delpero-freight-img-6.png',
             ],
             // link: {
             //     title: 'delperofreight.com',
@@ -55,9 +55,9 @@ const Experience =(props) => {
             title: 'Antur Expeditions',
             text: 'Antur Expeditions is a hypothetical outdoor adventure sports and expedition company. I built the entire landscape in CSS and really enhanced my knowledge of CSS animations. The sky changes colour depending on the time of day that the user accesses the website as well as the shadows changing position depending on the position of the sun.',
             img: [
-                '/images/antur-img-0.png',
-                '/images/antur-img-1.png',
-                '/images/antur-img-2.png',
+                '/Images/antur-img-0.png',
+                '/Images/antur-img-1.png',
+                '/Images/antur-img-2.png',
             ],
             // link: {
             //     title: 'heloo.com',
@@ -70,8 +70,8 @@ const Experience =(props) => {
             title: 'Ahoj Tours',
             text: 'Ahoj Tours is a hypothetical city tour and guide company. One of my first projects in Next.js, it mainly came about in order to develop my skill with the technology and my eye for web design.',
             img: [
-                '/images/ahoj-img-0.png',
-                '/images/ahoj-img-1.png',
+                '/Images/ahoj-img-0.png',
+                '/Images/ahoj-img-1.png',
             ],
             // link: {
             //     title: 'heloo2.com',
