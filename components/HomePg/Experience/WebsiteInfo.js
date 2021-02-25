@@ -10,9 +10,6 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 function WebsiteInfo(props) {
     const [infoPos, setInfoPos] = useState('200%');
     const [headerPos, setHeaderPos] = useState('80%');
-    const [windowHeight, setWindowHeight] = useState(null);
-    const [windowWidth, setWindowWidth] = useState(null);
-
 
     const carouselRef = useRef('');
 
@@ -61,6 +58,7 @@ function WebsiteInfo(props) {
                                 <div className={styles.imgCarouselContainer} onClick={closeInfoTab} style={{ left: props.carouselPos }}>
                                     <WebsiteImgCarousel 
                                         projectProps={objArr}
+                                        closeInfoTab={closeInfoTab}
                                     />
                                 </div>
                                 {isDesktopLg ? 
