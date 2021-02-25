@@ -65,8 +65,12 @@
   }
 }
 @media only screen and (min-width: 1400px) {
+  .mainTitle {
+    left: 6vw;
+  }
   .secondaryTitle {
     font-size: 4em;
-    bottom: 14vh;
+    right: 8vw;
+    bottom: 20vh;
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import ContactOverlay from './ContactOverlay/ContactOverlay';
 
 const Layout = (props) => (

@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import styles from '../styles/Home.module.css'
+import React from 'react';
 import Layout from '../components/Layout/Layout';
 import LandingPage from '../components/HomePg/Landing';
 import Experience from '../components/HomePg/Experience/Experience';
@@ -10,7 +9,6 @@ import ContactSection from '../components/HomePg/ContactSection';
 
 
 export default function Home() {
-
   return (
     <Layout>
       <LandingPage />

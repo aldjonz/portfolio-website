@@ -39,6 +39,11 @@ const Skills = () => {
                         alt="HTML5"
                     />
                     <TechIcon 
+                        title="Bootstrap 4"
+                        img='SkillsIcons/bootstrap-4.svg'
+                        alt="Bootstrap 4"
+                    />
+                    <TechIcon 
                         title="Git"
                         img='SkillsIcons/git.svg'
                         alt="Git"

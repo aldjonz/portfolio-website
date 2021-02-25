@@ -14,7 +14,7 @@ const WebsiteImgCarousel = (props) => {
         return (
             <Slide index={i} key={i}>
                 <div className={styles.websiteImg}>
-                    <img src={image} alt="bgImg" />
+                    <img src={image} alt="Background Image" />
                 </div>
             </Slide>
         );
