@@ -6,9 +6,9 @@ const socialMediaIcons = () => (
         <a href="https://github.com/aldjonz">
             <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href="/">
+        {/* <a href="/">
             <FontAwesomeIcon icon={faLinkedin} />
-        </a>
+        </a> */}
     </div>
 );
 
